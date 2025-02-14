@@ -1,0 +1,97 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	color: #333;
+}
+
+.container {
+	max-width: 800px;
+	margin: 20px auto;
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 2.5em;
+}
+
+.headline {
+	font-style: italic;
+	color: #777;
+}
+
+section {
+	margin-bottom: 30px;
+}
+
+section h2 {
+	border-bottom: 2px solid #ccc;
+	padding-bottom: 5px;
+}
+
+.experience-item,
+.education-item {
+	margin-bottom: 15px;
+}
+
+.company,
+.degree {
+	font-weight: bold;
+}
+
+.dates {
+	font-style: italic;
+	color: #777;
+}
+
+.skills ul {
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.skills li {
+	margin-right: 10px;
+	margin-bottom: 5px;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+footer {
+	text-align: center;
+	margin-top: 20px;
+	padding-top: 10px;
+	border-top: 1px solid #ccc;
+}
+
+footer a {
+	color: #0077cc;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
+
+.download-button {
+	position: fixed;
+	bottom: 24px;
+	right: 24px;
+	padding: 8px;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background: linear-gradient(145deg, rgb(22, 33, 62), rgb(31, 41, 55));
+	cursor: pointer;
+}
