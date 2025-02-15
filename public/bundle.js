@@ -47208,8 +47208,47 @@ var App = (() => {
     const doc = new E();
     const element = document.getElementById("content-to-pdf");
     if (element) {
+      const originalValues = {};
+      const variablesToOverride = [
+        "--font",
+        "--bg-color",
+        "--container-bg-color",
+        "--text-color",
+        "--heading-color",
+        "--headline-color",
+        "--section-border-color",
+        "--item-bg-color",
+        "--company-degree-color",
+        "--dates-color",
+        "--skills-border-color",
+        "--skills-bg-color",
+        "--footer-text-color",
+        "--link-color",
+        "--link-hover-color"
+      ];
+      variablesToOverride.forEach((variable) => {
+        originalValues[variable] = document.documentElement.style.getPropertyValue(variable);
+      });
+      document.documentElement.style.setProperty("--font", "sans-serif");
+      document.documentElement.style.setProperty("--bg-color", "#fff");
+      document.documentElement.style.setProperty("--container-bg-color", "#fff");
+      document.documentElement.style.setProperty("--text-color", "#000");
+      document.documentElement.style.setProperty("--heading-color", "#000");
+      document.documentElement.style.setProperty("--headline-color", "#333");
+      document.documentElement.style.setProperty("--section-border-color", "#ccc");
+      document.documentElement.style.setProperty("--item-bg-color", "#fff");
+      document.documentElement.style.setProperty("--company-degree-color", "#000");
+      document.documentElement.style.setProperty("--dates-color", "#333");
+      document.documentElement.style.setProperty("--skills-border-color", "#ccc");
+      document.documentElement.style.setProperty("--skills-bg-color", "#fff");
+      document.documentElement.style.setProperty("--footer-text-color", "#333");
+      document.documentElement.style.setProperty("--link-color", "#0077cc");
+      document.documentElement.style.setProperty("--link-hover-color", "#005580");
       doc.html(element, {
         callback: function(doc2) {
+          variablesToOverride.forEach((variable) => {
+            document.documentElement.style.setProperty(variable, originalValues[variable]);
+          });
           doc2.save("FilipsMasolovs.pdf");
         },
         margin: [10, 10, 10, 10],
@@ -47228,26 +47267,6 @@ var App = (() => {
   var import_jsx_runtime = __toESM(require_jsx_runtime());
   var App = () => {
     return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "container", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-        "button",
-        {
-          className: "download-button",
-          onClick: generatePdf,
-          children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-            "svg",
-            {
-              fill: "#ffffff",
-              height: "32px",
-              width: "32px",
-              viewBox: "0 0 29.978 29.978",
-              children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", { children: [
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M25.462,19.105v6.848H4.515v-6.848H0.489v8.861c0,1.111,0.9,2.012,2.016,2.012h24.967c1.115,0,2.016-0.9,2.016-2.012   v-8.861H25.462z" }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M14.62,18.426l-5.764-6.965c0,0-0.877-0.828,0.074-0.828s3.248,0,3.248,0s0-0.557,0-1.416c0-2.449,0-6.906,0-8.723   c0,0-0.129-0.494,0.615-0.494c0.75,0,4.035,0,4.572,0c0.536,0,0.524,0.416,0.524,0.416c0,1.762,0,6.373,0,8.742   c0,0.768,0,1.266,0,1.266s1.842,0,2.998,0c1.154,0,0.285,0.867,0.285,0.867s-4.904,6.51-5.588,7.193   C15.092,18.979,14.62,18.426,14.62,18.426z" })
-              ] })
-            }
-          )
-        }
-      ),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { id: "content-to-pdf", children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", { children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", { children: profileData.name }),
@@ -47255,8 +47274,10 @@ var App = (() => {
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { className: "summary", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Summary" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: profileData.summary }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: profileData.summarytwo })
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: profileData.summary }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: profileData.summarytwo })
+          ] })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { className: "experience", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Experience" }),
@@ -47331,7 +47352,19 @@ var App = (() => {
             profileData.location
           ] })
         ] })
-      ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        "button",
+        {
+          className: "download-button",
+          "aria-label": "Download CV",
+          onClick: generatePdf,
+          children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { viewBox: "0 0 29.978 29.978", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M25.462,19.105v6.848H4.515v-6.848H0.489v8.861c0,1.111,0.9,2.012,2.016,2.012h24.967c1.115,0,2.016-0.9,2.016-2.012   v-8.861H25.462z" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M14.62,18.426l-5.764-6.965c0,0-0.877-0.828,0.074-0.828s3.248,0,3.248,0s0-0.557,0-1.416c0-2.449,0-6.906,0-8.723   c0,0-0.129-0.494,0.615-0.494c0.75,0,4.035,0,4.572,0c0.536,0,0.524,0.416,0.524,0.416c0,1.762,0,6.373,0,8.742   c0,0.768,0,1.266,0,1.266s1.842,0,2.998,0c1.154,0,0.285,0.867,0.285,0.867s-4.904,6.51-5.588,7.193   C15.092,18.979,14.62,18.426,14.62,18.426z" })
+          ] }) })
+        }
+      )
     ] });
   };
   var root = import_client.default.createRoot(document.getElementById("root"));
