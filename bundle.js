@@ -39008,7 +39008,7 @@ var App = (() => {
         endDate: "2011-01"
       }
     ],
-    skills: ["React", "TypeScript", "JavaScript", "Node.js", "HTML", "CSS", "Git", "REST APIs"]
+    skills: ["React", "TypeScript", "JavaScript", "Next.js", "Node.js", "HTML", "CSS", "Git", "REST APIs"]
   };
 
   // node_modules/jspdf/dist/jspdf.es.min.js
