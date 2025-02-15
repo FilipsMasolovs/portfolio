@@ -47312,8 +47312,7 @@ var App = (() => {
                   edu.startDate,
                   " - ",
                   edu.endDate
-                ] }),
-                edu.description && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: edu.description })
+                ] })
               ]
             },
             index2
