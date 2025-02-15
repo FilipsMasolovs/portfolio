@@ -50,7 +50,6 @@ const App: React.FC = () => {
 							<p className='dates'>
 								{edu.startDate} - {edu.endDate}
 							</p>
-							{edu.description && <p>{edu.description}</p>}
 						</div>
 					))}
 				</section>

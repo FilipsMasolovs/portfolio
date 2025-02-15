@@ -14,9 +14,9 @@ export interface ProfileData {
 export interface Experience {
 	title: string
 	company: string
-	location?: string
+	location: string
 	startDate: string
-	endDate?: string
+	endDate: string
 	description: string
 }
 
@@ -25,5 +25,4 @@ export interface Education {
 	degree: string
 	startDate: string
 	endDate: string
-	description?: string
 }

@@ -45,5 +45,5 @@ export const profileData: ProfileData = {
 			endDate: '2011-01',
 		},
 	],
-	skills: ['React', 'TypeScript', 'JavaScript', 'Node.js', 'HTML', 'CSS', 'Git', 'REST APIs'],
+	skills: ['React', 'TypeScript', 'JavaScript', 'Next.js', 'Node.js', 'HTML', 'CSS', 'Git', 'REST APIs'],
 }
