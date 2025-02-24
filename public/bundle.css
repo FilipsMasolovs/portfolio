@@ -70,6 +70,7 @@ section h2 {
   gap: 8px;
 }
 .experience-item,
+.projects-item,
 .education-item {
   display: flex;
   flex-direction: column;
@@ -83,6 +84,18 @@ section h2 {
 .degree {
   font-weight: bold;
   color: var(--company-degree-color);
+}
+.links {
+  display: flex;
+  flex-direction: column;
+}
+.links a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+.links a:hover {
+  text-decoration: underline;
+  color: var(--link-hover-color);
 }
 .dates {
   font-style: italic;

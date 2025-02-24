@@ -7,6 +7,7 @@ export interface ProfileData {
 	linkedinUrl: string
 	githubUrl: string
 	experience: Experience[]
+	projects: Project[]
 	education: Education[]
 	skills: string[]
 }
@@ -18,6 +19,19 @@ export interface Experience {
 	startDate: string
 	endDate: string
 	description: string
+}
+
+export interface Project {
+	title: string
+	description: string
+	type: string
+	techStack: string
+	links: {
+		app: string
+		appLink: string
+		code: string
+		codeLink: string
+	}
 }
 
 export interface Education {

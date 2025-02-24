@@ -37,6 +37,34 @@ export const profileData: ProfileData = {
 			description: 'Developed and maintained new features and fixed bugs for Visual Composer, a website builder for WordPress.',
 		},
 	],
+	projects: [
+		{
+			title: 'M-DRIVE',
+			description:
+				'M-DRIVE is a visually appealing, Next.js–based file management application inspired by Google Drive. It leverages modern technologies such as Next.js (App Router), TypeScript, Clerk for authentication, PostHog for analytics, UploadThing for file uploads, and Drizzle ORM for database operations. The project is designed with a modular architecture for both server and client components.',
+			type: 'personal',
+			techStack: 'Next.js, React, Typescript, Zustand, Netlify, SingleStore, Drizzle ORM, Clerk, UploadThing, PostHog',
+			links: {
+				app: 'm-hub.link',
+				appLink: 'https://m-hub.link',
+				code: 'github.com/FilipsMasolovs/m-drive',
+				codeLink: 'https://github.com/FilipsMasolovs/m-drive',
+			},
+		},
+		{
+			title: 'NoteMark',
+			description:
+				'NoteMark is a lightweight, mobile-first markdown note-taking app built with Next.js, React, and Zustand. It offers a seamless writing experience with real-time markdown preview, autosave functionality, intuitive note management (create, update, delete), and customizable themes. Designed for both desktop and mobile environments, NoteMark empowers users to effortlessly jot down ideas, format their notes with a rich markdown toolbar, and manage their content with smooth, responsive transitions.',
+			type: 'personal',
+			techStack: 'Next.js, React, Typescript, Zustand, Netlify, React-Markdown',
+			links: {
+				app: 'note-mark.netlify.app',
+				appLink: 'https://note-mark.netlify.app',
+				code: 'github.com/FilipsMasolovs/note-mark',
+				codeLink: 'https://github.com/FilipsMasolovs/note-mark',
+			},
+		},
+	],
 	education: [
 		{
 			institution: 'Riga Technical University',

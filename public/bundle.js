@@ -39000,6 +39000,32 @@ var App = (() => {
         description: "Developed and maintained new features and fixed bugs for Visual Composer, a website builder for WordPress."
       }
     ],
+    projects: [
+      {
+        title: "M-DRIVE",
+        description: "M-DRIVE is a visually appealing, Next.js\u2013based file management application inspired by Google Drive. It leverages modern technologies such as Next.js (App Router), TypeScript, Clerk for authentication, PostHog for analytics, UploadThing for file uploads, and Drizzle ORM for database operations. The project is designed with a modular architecture for both server and client components.",
+        type: "personal",
+        techStack: "Next.js, React, Typescript, Zustand, Netlify, SingleStore, Drizzle ORM, Clerk, UploadThing, PostHog",
+        links: {
+          app: "m-hub.link",
+          appLink: "https://m-hub.link",
+          code: "github.com/FilipsMasolovs/m-drive",
+          codeLink: "https://github.com/FilipsMasolovs/m-drive"
+        }
+      },
+      {
+        title: "NoteMark",
+        description: "NoteMark is a lightweight, mobile-first markdown note-taking app built with Next.js, React, and Zustand. It offers a seamless writing experience with real-time markdown preview, autosave functionality, intuitive note management (create, update, delete), and customizable themes. Designed for both desktop and mobile environments, NoteMark empowers users to effortlessly jot down ideas, format their notes with a rich markdown toolbar, and manage their content with smooth, responsive transitions.",
+        type: "personal",
+        techStack: "Next.js, React, Typescript, Zustand, Netlify, React-Markdown",
+        links: {
+          app: "note-mark.netlify.app",
+          appLink: "https://note-mark.netlify.app",
+          code: "github.com/FilipsMasolovs/note-mark",
+          codeLink: "https://github.com/FilipsMasolovs/note-mark"
+        }
+      }
+    ],
     education: [
       {
         institution: "Riga Technical University",
@@ -47281,42 +47307,55 @@ var App = (() => {
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { className: "experience", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Experience" }),
-          profileData.experience.map((exp, index2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
-            "div",
-            {
-              className: "experience-item",
-              children: [
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { children: exp.title }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "company", children: exp.company }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "dates", children: [
-                  exp.startDate,
-                  " - ",
-                  exp.endDate || "Present"
-                ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: exp.description })
-              ]
-            },
-            index2
-          ))
+          profileData.experience.map((exp, index2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "experience-item", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { children: exp.title }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "company", children: exp.company }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "dates", children: [
+              exp.startDate,
+              " - ",
+              exp.endDate || "Present"
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: exp.description })
+          ] }, index2))
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { className: "projects", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Projects" }),
+          profileData.projects.map((proj, index2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "projects-item", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", { children: [
+              proj.title,
+              " \u2022 ",
+              proj.type
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "description", children: proj.description }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "techStack", children: [
+              "TechStack: ",
+              proj.techStack
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "links", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
+                "app:",
+                " ",
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href: proj.links.appLink, target: "_blank", rel: "noopener noreferrer", children: proj.links.app })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
+                "code:",
+                " ",
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href: proj.links.codeLink, target: "_blank", rel: "noopener noreferrer", children: proj.links.code })
+              ] })
+            ] })
+          ] }, index2))
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { className: "education", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Education" }),
-          profileData.education.map((edu, index2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
-            "div",
-            {
-              className: "education-item",
-              children: [
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { children: edu.institution }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "degree", children: edu.degree }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "dates", children: [
-                  edu.startDate,
-                  " - ",
-                  edu.endDate
-                ] })
-              ]
-            },
-            index2
-          ))
+          profileData.education.map((edu, index2) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "education-item", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { children: edu.institution }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "degree", children: edu.degree }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "dates", children: [
+              edu.startDate,
+              " - ",
+              edu.endDate
+            ] })
+          ] }, index2))
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", { className: "skills", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { children: "Skills" }),
@@ -47324,26 +47363,10 @@ var App = (() => {
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("footer", { children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-              "a",
-              {
-                href: profileData.linkedinUrl,
-                target: "_blank",
-                rel: "noopener noreferrer",
-                children: "LinkedIn"
-              }
-            ),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href: profileData.linkedinUrl, target: "_blank", rel: "noopener noreferrer", children: "LinkedIn" }),
             profileData.githubUrl && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
               " | ",
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-                "a",
-                {
-                  href: profileData.githubUrl,
-                  target: "_blank",
-                  rel: "noopener noreferrer",
-                  children: "GitHub"
-                }
-              )
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", { href: profileData.githubUrl, target: "_blank", rel: "noopener noreferrer", children: "GitHub" })
             ] })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { children: [
@@ -47352,18 +47375,10 @@ var App = (() => {
           ] })
         ] })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-        "button",
-        {
-          className: "download-button",
-          "aria-label": "Download CV",
-          onClick: generatePdf,
-          children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { viewBox: "0 0 29.978 29.978", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M25.462,19.105v6.848H4.515v-6.848H0.489v8.861c0,1.111,0.9,2.012,2.016,2.012h24.967c1.115,0,2.016-0.9,2.016-2.012   v-8.861H25.462z" }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M14.62,18.426l-5.764-6.965c0,0-0.877-0.828,0.074-0.828s3.248,0,3.248,0s0-0.557,0-1.416c0-2.449,0-6.906,0-8.723   c0,0-0.129-0.494,0.615-0.494c0.75,0,4.035,0,4.572,0c0.536,0,0.524,0.416,0.524,0.416c0,1.762,0,6.373,0,8.742   c0,0.768,0,1.266,0,1.266s1.842,0,2.998,0c1.154,0,0.285,0.867,0.285,0.867s-4.904,6.51-5.588,7.193   C15.092,18.979,14.62,18.426,14.62,18.426z" })
-          ] }) })
-        }
-      )
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { className: "download-button", "aria-label": "Download CV", onClick: generatePdf, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { viewBox: "0 0 29.978 29.978", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("g", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M25.462,19.105v6.848H4.515v-6.848H0.489v8.861c0,1.111,0.9,2.012,2.016,2.012h24.967c1.115,0,2.016-0.9,2.016-2.012   v-8.861H25.462z" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M14.62,18.426l-5.764-6.965c0,0-0.877-0.828,0.074-0.828s3.248,0,3.248,0s0-0.557,0-1.416c0-2.449,0-6.906,0-8.723   c0,0-0.129-0.494,0.615-0.494c0.75,0,4.035,0,4.572,0c0.536,0,0.524,0.416,0.524,0.416c0,1.762,0,6.373,0,8.742   c0,0.768,0,1.266,0,1.266s1.842,0,2.998,0c1.154,0,0.285,0.867,0.285,0.867s-4.904,6.51-5.588,7.193   C15.092,18.979,14.62,18.426,14.62,18.426z" })
+      ] }) }) })
     ] });
   };
   var root = import_client.default.createRoot(document.getElementById("root"));

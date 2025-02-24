@@ -24,10 +24,7 @@ const App: React.FC = () => {
 				<section className='experience'>
 					<h2>Experience</h2>
 					{profileData.experience.map((exp, index) => (
-						<div
-							key={index}
-							className='experience-item'
-						>
+						<div key={index} className='experience-item'>
 							<h3>{exp.title}</h3>
 							<p className='company'>{exp.company}</p>
 							<p className='dates'>
@@ -38,13 +35,37 @@ const App: React.FC = () => {
 					))}
 				</section>
 
+				<section className='projects'>
+					<h2>Projects</h2>
+					{profileData.projects.map((proj, index) => (
+						<div key={index} className='projects-item'>
+							<h3>
+								{proj.title} • {proj.type}
+							</h3>
+							<p className='description'>{proj.description}</p>
+							<p className='techStack'>TechStack: {proj.techStack}</p>
+							<p className='links'>
+								<span>
+									app:{' '}
+									<a href={proj.links.appLink} target='_blank' rel='noopener noreferrer'>
+										{proj.links.app}
+									</a>
+								</span>
+								<span>
+									code:{' '}
+									<a href={proj.links.codeLink} target='_blank' rel='noopener noreferrer'>
+										{proj.links.code}
+									</a>
+								</span>
+							</p>
+						</div>
+					))}
+				</section>
+
 				<section className='education'>
 					<h2>Education</h2>
 					{profileData.education.map((edu, index) => (
-						<div
-							key={index}
-							className='education-item'
-						>
+						<div key={index} className='education-item'>
 							<h3>{edu.institution}</h3>
 							<p className='degree'>{edu.degree}</p>
 							<p className='dates'>
@@ -65,21 +86,13 @@ const App: React.FC = () => {
 
 				<footer>
 					<p>
-						<a
-							href={profileData.linkedinUrl}
-							target='_blank'
-							rel='noopener noreferrer'
-						>
+						<a href={profileData.linkedinUrl} target='_blank' rel='noopener noreferrer'>
 							LinkedIn
 						</a>
 						{profileData.githubUrl && (
 							<>
 								{' | '}
-								<a
-									href={profileData.githubUrl}
-									target='_blank'
-									rel='noopener noreferrer'
-								>
+								<a href={profileData.githubUrl} target='_blank' rel='noopener noreferrer'>
 									GitHub
 								</a>
 							</>
@@ -88,11 +101,7 @@ const App: React.FC = () => {
 					<p>Location: {profileData.location}</p>
 				</footer>
 			</div>
-			<button
-				className='download-button'
-				aria-label='Download CV'
-				onClick={generatePdf}
-			>
+			<button className='download-button' aria-label='Download CV' onClick={generatePdf}>
 				<svg viewBox='0 0 29.978 29.978'>
 					<g>
 						<path d='M25.462,19.105v6.848H4.515v-6.848H0.489v8.861c0,1.111,0.9,2.012,2.016,2.012h24.967c1.115,0,2.016-0.9,2.016-2.012   v-8.861H25.462z' />
