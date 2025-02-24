@@ -1,0 +1,32 @@
+{
+	"name": "react-ts-esbuild-demo",
+	"version": "1.0.0",
+	"main": "index.js",
+	"homepage": "https://filipsmasolovs.github.io/portfolio",
+	"scripts": {
+		"build": "node ./esbuild.config.js",
+		"dev": "node ./esbuild.config.js",
+		"start": "open public/index.html",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d public"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"html2canvas": "^1.4.1",
+		"jspdf": "^2.5.2",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	},
+	"devDependencies": {
+		"@types/react": "^19.0.8",
+		"@types/react-dom": "^19.0.3",
+		"esbuild": "^0.25.0",
+		"esbuild-css-modules-plugin": "^3.1.4",
+		"esbuild-sass-plugin": "^3.3.1",
+		"gh-pages": "^6.3.0",
+		"typescript": "^5.7.3"
+	}
+}
