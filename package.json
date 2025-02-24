@@ -7,7 +7,8 @@
 		"build": "node ./esbuild.config.js",
 		"dev": "node ./esbuild.config.js",
 		"start": "open public/index.html",
-		"deploy": "gh-pages -d public"
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d build"
 	},
 	"keywords": [],
 	"author": "",
